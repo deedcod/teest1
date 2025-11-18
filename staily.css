@@ -1,18 +1,35 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
+/*============================================
+  DREAM MEDIA - MAIN STYLESHEET
+  ============================================
+  Author: Dream Media Team
+  Description: Professional digital marketing agency website
+  Version: 2.0
+  Last Updated: 2024
+============================================*/
 
-/**
- * copyright 2022 codewithsadee
- */
+/*============================================
+  TABLE OF CONTENTS
+  ============================================
+  1. Custom Properties
+  2. Reset Styles
+  3. Reused Styles
+  4. Header
+  5. Hero Section
+  6. Services Section
+  7. Partners Section
+  8. Features Section
+  9. Marketing Projects Section
+  10. Footer
+  11. Floating Contact Button
+  12. Lightbox
+  13. Dark Theme
+  14. Animations
+  15. Media Queries
+============================================*/
 
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+/*============================================
+  1. CUSTOM PROPERTIES
+============================================*/
 
 :root {
 
@@ -116,9 +133,9 @@
   
   
   
-  /*-----------------------------------*\
-    #RESET
-  \*-----------------------------------*/
+/*============================================
+  2. RESET STYLES
+============================================*/
   
   *,
   *::before,
@@ -187,9 +204,9 @@
   
   
   
-  /*-----------------------------------*\
-    #REUSED STYLE
-  \*-----------------------------------*/
+/*============================================
+  3. REUSED STYLES
+============================================*/
   
   .container { padding-inline: 15px; }
   
@@ -240,8 +257,8 @@
     bottom: 8px;
     left: 0;
     width: 100%;
-    height: 6px;
-    background-color: var(--mustard);
+    height: 0px;
+    background-color: transparent;
     z-index: -1;
   }
   
@@ -380,9 +397,9 @@
   
   
   
-  /*-----------------------------------*\
-    #HEADER
-  \*-----------------------------------*/
+/*============================================
+  4. HEADER
+============================================*/
   
   .header .btn { display: none; }
   
@@ -526,9 +543,9 @@
   
   
   
-  /*-----------------------------------*\
-    #HERO
-  \*-----------------------------------*/
+/*============================================
+  5. HERO SECTION
+============================================*/
   
   .hero { 
     padding-block-start: calc(var(--section-padding) + 60px);
@@ -608,9 +625,9 @@
   
   
   
-  /*-----------------------------------*\
-    #SERVICE
-  \*-----------------------------------*/
+/*============================================
+  6. SERVICES SECTION
+============================================*/
   
   .service { background-color: var(--ghost-white); }
   
@@ -699,9 +716,9 @@
   
   
   
-  /*-----------------------------------*\
-    #FEATURE
-  \*-----------------------------------*/
+/*============================================
+  7. FEATURES SECTION
+============================================*/
   
   .feature .container,
   .feature-list {
@@ -762,9 +779,9 @@
   
   
   
-  /*-----------------------------------*\
-    #PROJECT
-  \*-----------------------------------*/
+/*============================================
+  8. PROJECT SECTION
+============================================*/
   
   .project { background-color: var(--ghost-white); }
   
@@ -834,9 +851,9 @@
     transform: translateY(-50%);
   }
    
-  /*-----------------------------------*\
-    #PARTNERS
-  \*-----------------------------------*/
+/*============================================
+  9. PARTNERS SECTION
+============================================*/
   
   .partners { 
     background: linear-gradient(180deg, var(--white) 0%, var(--ghost-white) 100%);
@@ -901,9 +918,9 @@
   }
 
 
-  /*-----------------------------------*\
-    #BLOG
-  \*-----------------------------------*/
+/*============================================
+  10. BLOG SECTION
+============================================*/
   
   .blog { background-color: var(--ghost-white); }
   
@@ -981,9 +998,9 @@
   
   
   
-  /*-----------------------------------*\
-    #FOOTER
-  \*-----------------------------------*/
+/*============================================
+  11. FOOTER
+============================================*/
   
   .footer {
     background: linear-gradient(180deg, var(--raisin-black-1) 0%, var(--raisin-black-2) 100%);
@@ -1139,9 +1156,9 @@
   
   
   
-  /*-----------------------------------*\
-    #BACK TO TOP
-  \*-----------------------------------*/
+/*============================================
+  12. BACK TO TOP BUTTON
+============================================*/
   
   .back-top-btn {
     position: fixed;
@@ -1176,13 +1193,13 @@
   
   
   
-  /*-----------------------------------*\
-    #MEDIA QUERIES
-  \*-----------------------------------*/
-  
-  /**
-   * responsive for large than 575px screen
-   */
+/*============================================
+  13. MEDIA QUERIES
+============================================*/
+
+/* ============================================
+   Responsive for screens larger than 575px
+============================================ */
   
   @media (min-width: 575px) {
   
@@ -1230,9 +1247,9 @@
   
   
   
-  /**
-   * responsive for large than 768px screen
-   */
+/* ============================================
+   Responsive for screens larger than 768px
+============================================ */
   
   @media (min-width: 768px) {
   
@@ -1393,9 +1410,9 @@
   
   
   
-  /**
-   * responsive for large than 992px screen
-   */
+/* ============================================
+   Responsive for screens larger than 992px
+============================================ */
   
   @media (min-width: 992px) {
   
@@ -1586,9 +1603,9 @@
   
   
   
-  /**
-   * responsive for large than 1200px screen
-   */
+/* ============================================
+   Responsive for screens larger than 1200px
+============================================ */
   
   @media (min-width: 1200px) {
   
@@ -1692,7 +1709,9 @@
     .blog-card .card-title { --fs-4: 2.4rem; }
   
   }
-/* === Marketing Section === */
+/*============================================
+  14. MARKETING SLIDER SECTION
+============================================*/
 
 .marketing {
   background-color: var(--ghost-white);
@@ -1802,7 +1821,10 @@
   background: var(--majorelle-blue);
 }
 
-/* === Lightbox styles === */
+/*============================================
+  15. LIGHTBOX IMAGE VIEWER
+============================================*/
+
 #lightbox {
   position: fixed;
   inset: 0;
@@ -1875,7 +1897,10 @@
   .lightbox__close { font-size: 1.6rem; }
 }
 
-/* === Added responsive professional image adjustments === */
+/*============================================
+  16. RESPONSIVE IMAGE ADJUSTMENTS
+============================================*/
+
 img, .img-cover, .img-cover2, .slider-img {
     width: 100%;
     height: auto;
@@ -1913,7 +1938,10 @@ img, .img-cover, .img-cover2, .slider-img {
     .hero-banner img { max-width: 260px; }
 }
 
-/* === Header small buttons & controls === */
+/*============================================
+  17. HEADER CONTROLS (Language & Theme Toggle)
+============================================*/
+
 .header-controls {
   display: flex;
   align-items: center;
@@ -1958,7 +1986,10 @@ img, .img-cover, .img-cover2, .slider-img {
   }
 }
 
-/* === Professional Dark Theme with Better Text Colors === */
+/*============================================
+  18. DARK THEME
+============================================*/
+
 html[data-theme="dark"] {
   /* Dark theme color variables */
   --dark-bg-primary: #0a0e1a;
@@ -2306,7 +2337,10 @@ html[data-theme="dark"] textarea:focus {
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
-/* === Professional reveal-on-scroll animation === */
+/*============================================
+  19. REVEAL ON SCROLL ANIMATION
+============================================*/
+
 .reveal {
   opacity: 0;
   transform: translateY(50px) scale(0.95);
@@ -2403,9 +2437,9 @@ html[data-theme="dark"] textarea:focus {
   }
 }
 
-/* ================================
-   Floating Contact Button + Menu
-================================ */
+/*============================================
+  20. FLOATING CONTACT BUTTON
+============================================*/
 
 .floating-contact {
   position: fixed;
@@ -2524,11 +2558,11 @@ html[data-theme="dark"] textarea:focus {
   }
 
 
-/* ================================
-   Professional Enhancements
-================================ */
+/*============================================
+  21. PROFESSIONAL ENHANCEMENTS & ANIMATIONS
+============================================*/
 
-/* Smooth page entrance */
+/* Smooth page entrance animation */
 @keyframes pageEntrance {
   from {
     opacity: 0;

@@ -1,146 +1,182 @@
-// قائمة الترجمات (ثنائي اللغة لكل نصوص الصفحة الأساسية)
+/*============================================
+  DREAM MEDIA - MAIN JAVASCRIPT
+  ============================================
+  Features:
+  - Bilingual Content (Arabic/English)
+  - Dark/Light Theme Toggle
+  - Swiper Slider
+  - Lightbox Image Viewer
+  - Reveal on Scroll Animation
+  - Floating Contact Menu
+============================================*/
+
+// ============================================
+// TRANSLATIONS - Bilingual Content
+// ============================================
 const translations = {
   en: {
+    // ====== Navigation ======
     home: "Home",
     services: "Services",
     features: "Features",
     marketing: "Marketing",
-    bookNow: "All Eyes On You 👋",
+    bookNow: "Book Now 👋",
+
+    // ====== Hero Section ======
     heroTitle:
       'Building Digital <span class="has-before">Marketing</span>, Brand and Experience',
     heroText:
       "At Dream Media, we specialize in marketing, brand building, training, and consulting, delivering efficient and impactful solutions.",
 
-    // Services
+    // ====== Services Section ======
     servicesSubtitle: "Our Services",
     servicesTitle:
       'Managing your business with our <span class="has-before">best service</span>',
-    serviceProductManagement: "Product Management",
-    serviceWebMobile: "Web & Mobile Development",
-    serviceMarketing: "Marketing",
-    serviceBusinessTraining: "Business training",
-    servicePrinting: "Printing",
-    serviceMarketingCommunication: "Marketing and Communication",
-    serviceBusinessDevelopment: "Business Development",
-    serviceMoreLink: "04 More Service",
+    serviceCard1: "Marketing & Communication",
+    serviceCard2: "Business Training",
+    serviceCard3: "Printing",
+    serviceCard4: "Event Management",
+    serviceCard5: "Design and Creatives",
+    serviceCard6: "Marketing and Communication",
+    serviceCard7: "Business Development",
+    serviceMoreLink: "04 More Services",
 
-    // Feature
+    // ====== Features Section ======
     featureSubtitle: "Why Choose Dream Media",
     featureTitle:
       'Experts in Marketing, Training, and Business Consulting, Solving Client <span class="has-before">Challenges</span>',
-    featureFastTitle: "Fast working process",
+    featureFastTitle: "Fast Working Process",
     featureFastText:
-      "At Dream Media we specialize in marketing, building brands for agencies, and social media design.",
-    featureTeamTitle: "Dedicated team",
+      "At Dream Media we specialize in marketing, building brand for agency, social media design.",
+    featureTeamTitle: "Dedicated Team",
     featureTeamText:
       "At Dream Media, our team works closely with you to build an effective and integrated marketing strategy.",
-    featureSupportTitle: "24/7 hours support",
+    featureSupportTitle: "24/7 Hours Support",
     featureSupportText:
-      "We provide ongoing support and consulting to ensure campaign success and continuous improvement.",
+      "At Dream Media we specialize in designing, building brand for agency, social media design.",
 
-    // Marketing slider
+    // ====== Marketing Projects Section ======
     marketingSubtitle: "Our Work",
     marketingTitle: 'Featured <span class="has-before">Projects</span>',
     marketingButton: "View Project",
 
-    // Partners
+    // ====== Partners Section ======
     partnersSubtitle: "Our Partners",
     partnersTitle: 'Trusted by Leading <span class="has-before">Companies</span>',
 
-    // Footer
-    footerAboutTitle: "About Dream media",
+    // ====== Footer Section ======
+    footerAboutTitle: "About Dream Media",
     footerAboutText:
       "Baghdad-based marketing and business solutions company specializing in digital marketing, social media management, video production, printing, and training. We help businesses and organizations grow and build a strong presence through creative strategies and measurable results.",
-    footerInstagramTitle: "Instagram post",
-    footerCopyright: "© 2024 Dream Media.",
+    footerInstagramTitle: "Instagram Posts",
+    footerCopyright: "© 2024 Dream Media. All Rights Reserved",
 
-    // Floating contact
+    // ====== Floating Contact ======
     contactWhatsApp: "WhatsApp",
     contactEmail: "Email",
-    contactPhone: "Phone"
+    contactPhone: "Phone",
+
+    // ====== Additional UI Elements ======
+    closeButton: "Close",
+    previousButton: "Previous",
+    nextButton: "Next",
+    viewImage: "View Image"
   },
 
   ar: {
+    // ====== القائمة الرئيسية ======
     home: "الرئيسية",
     services: "الخدمات",
     features: "المميزات",
     marketing: "التسويق",
-    blog: "المدونة",
-    bookNow: "كل الأنظار عليك 👋",
+    bookNow: "احجز الآن 👋",
+
+    // ====== قسم البطل (Hero) ======
     heroTitle:
       'نبني <span class="has-before">التسويق الرقمي</span>، الهوية التجارية والتجربة',
-
     heroText:
       "في دريم ميديا نختص في التسويق وبناء العلامة التجارية والتدريب والاستشارات لنقدّم حلولًا فعّالة ومؤثرة.",
 
-    // Services
+    // ====== قسم الخدمات ======
     servicesSubtitle: "خدماتنا",
     servicesTitle:
       'ندير أعمالك من خلال <span class="has-before">أفضل الخدمات</span>',
-    serviceProductManagement: "إدارة المنتجات",
-    serviceWebMobile: "تطوير المواقع والتطبيقات",
-    serviceMarketing: "التسويق",
-    serviceBusinessTraining: "تدريب الأعمال",
-    servicePrinting: "الطباعة والإنتاج",
-    serviceMarketingCommunication: "التسويق والاتصال",
-    serviceBusinessDevelopment: "تطوير الأعمال",
-    serviceMoreLink: "خدمات أخرى",
+    serviceCard1: "التسويق والاتصال",
+    serviceCard2: "تدريب الأعمال",
+    serviceCard3: "الطباعة",
+    serviceCard4: "إدارة الفعاليات",
+    serviceCard5: "التصميم والإبداع",
+    serviceCard6: "التسويق والاتصال",
+    serviceCard7: "تطوير الأعمال",
+    serviceMoreLink: "04 خدمات أخرى",
 
-    // Feature
+    // ====== قسم المميزات ======
     featureSubtitle: "لماذا تختار دريم ميديا؟",
     featureTitle:
-      'خبراء في التسويق والتدريب والاستشارات لنحل <span class="has-before">تحديات عملائك</span>',
+      'خبراء في التسويق والتدريب والاستشارات لنحل <span class="has-before">تحديات</span> عملائنا',
     featureFastTitle: "سرعة في إنجاز العمل",
     featureFastText:
-      "نوفّر خططًا مرنة وسريعة للتسويق وتصميم المحتوى وبناء الهوية البصرية بما يناسب طبيعة عملك.",
-    featureTeamTitle: "فريق مخصص لنجاحك",
+      "في دريم ميديا نختص في التسويق، بناء العلامة التجارية، تصميم السوشيال ميديا.",
+    featureTeamTitle: "فريق متخصص",
     featureTeamText:
-      "فريق دريم ميديا يعمل معك خطوة بخطوة لبناء استراتيجية تسويق متكاملة وفعّالة.",
-    featureSupportTitle: "دعم متواصل 24/7",
+      "في دريم ميديا، يعمل فريقنا معك خطوة بخطوة لبناء استراتيجية تسويقية فعّالة ومتكاملة.",
+    featureSupportTitle: "دعم على مدار الساعة",
     featureSupportText:
-      "نقدّم دعمًا واستشارات مستمرة لضمان استمرار نجاح الحملات التسويقية وتحسين النتائج.",
+      "في دريم ميديا نختص في التصميم، بناء العلامة التجارية، تصميم السوشيال ميديا.",
 
-    // Marketing slider
+    // ====== قسم المشاريع التسويقية ======
     marketingSubtitle: "أعمالنا",
     marketingTitle: 'أبرز <span class="has-before">المشاريع</span>',
     marketingButton: "عرض المشروع",
 
-    // Partners
+    // ====== قسم الشركاء ======
     partnersSubtitle: "شركاؤنا",
     partnersTitle: 'موثوق به من قبل <span class="has-before">شركات رائدة</span>',
 
-    // Footer
+    // ====== قسم الفوتر ======
     footerAboutTitle: "عن دريم ميديا",
     footerAboutText:
       "شركة حلول تسويقية وتجارية مقرّها بغداد، متخصصة في التسويق الرقمي، إدارة حسابات التواصل الاجتماعي، إنتاج الفيديو، الطباعة، والتدريب. نساعد الشركات والمؤسسات على النمو وبناء حضور قوي من خلال استراتيجيات إبداعية ونتائج قابلة للقياس.",
     footerInstagramTitle: "منشورات إنستغرام",
-    footerCopyright: "© 2024 دريم ميديا.",
+    footerCopyright: "© 2024 دريم ميديا. جميع الحقوق محفوظة",
 
-    // Floating contact
+    // ====== زر التواصل العائم ======
     contactWhatsApp: "واتساب",
     contactEmail: "البريد الإلكتروني",
-    contactPhone: "اتصال"
+    contactPhone: "اتصال",
+
+    // ====== عناصر واجهة المستخدم الإضافية ======
+    closeButton: "إغلاق",
+    previousButton: "السابق",
+    nextButton: "التالي",
+    viewImage: "عرض الصورة"
   }
 };
 
+// ============================================
+// LANGUAGE TOGGLE FUNCTIONALITY
+// ============================================
 const langToggleBtn = document.getElementById("lang-toggle-btn");
 const htmlTag = document.documentElement;
 
-// اللغة الافتراضية: عربي
+// Default Language: Arabic
 let currentLang = localStorage.getItem("lang") || "ar";
 
-// دالة تحديث المحتوى حسب اللغة
+/**
+ * Update content based on selected language
+ * @param {string} lang - Language code ('ar' or 'en')
+ */
 function updateContent(lang) {
-  // ضبط اتجاه الصفحة
+  // Set page direction (RTL for Arabic, LTR for English)
   htmlTag.lang = lang;
   htmlTag.dir = lang === "ar" ? "rtl" : "ltr";
 
-  // زر اللغة (AR / EN)
+  // Update language toggle button text
   if (langToggleBtn) {
     langToggleBtn.textContent = lang === "ar" ? "EN" : "AR";
   }
 
-  // ====== القائمة الرئيسية (Navbar) ======
+  // ====== Navigation Menu ======
   const navHome = document.querySelector('[data-nav-link][href="#home"]');
   const navService = document.querySelector('[data-nav-link][href="#service"]');
   const navFeature = document.querySelector('[data-nav-link][href="#feature"]');
@@ -153,11 +189,11 @@ function updateContent(lang) {
   if (navProject) navProject.textContent = translations[lang].marketing;
   if (navBlog) navBlog.textContent = translations[lang].blog;
 
-  // زر "All Eyes On You"
+  // ====== Book Now Button ======
   const bookBtn = document.querySelector(".btn-primary.has-before.has-after");
   if (bookBtn) bookBtn.textContent = translations[lang].bookNow;
 
-  // ====== قسم الـ Hero ======
+  // ====== Hero Section ======
   const heroHeading = document.getElementById("hero-heading");
   if (heroHeading) {
     heroHeading.innerHTML = translations[lang].heroTitle;
@@ -168,7 +204,7 @@ function updateContent(lang) {
     heroTextEl.textContent = translations[lang].heroText;
   }
 
-  // ====== قسم الخدمات (#service) ======
+  // ====== Services Section ======
   const serviceSection = document.getElementById("service");
   if (serviceSection) {
     const serviceSubtitle = serviceSection.querySelector(".section-subtitle");
@@ -186,13 +222,13 @@ function updateContent(lang) {
       ".service-card .card-title"
     );
     const serviceKeys = [
-      "serviceProductManagement",
-      "serviceWebMobile",
-      "serviceMarketing",
-      "serviceBusinessTraining",
-      "servicePrinting",
-      "serviceMarketingCommunication",
-      "serviceBusinessDevelopment"
+      "serviceCard1",
+      "serviceCard2",
+      "serviceCard3",
+      "serviceCard4",
+      "serviceCard5",
+      "serviceCard6",
+      "serviceCard7"
     ];
 
     serviceCardTitles.forEach((el, idx) => {
@@ -208,7 +244,7 @@ function updateContent(lang) {
     }
   }
 
-  // ====== قسم المميزات (#feature) ======
+  // ====== Features Section ======
   const featureSection = document.getElementById("feature");
   if (featureSection) {
     const featureSubtitle = featureSection.querySelector(".section-subtitle");
@@ -245,12 +281,10 @@ function updateContent(lang) {
     }
   }
 
-  // ====== قسم التسويق / المشاريع (#project) ======
+  // ====== Marketing Projects Section ======
   const marketingSection = document.getElementById("project");
   if (marketingSection) {
-    const marketingSubtitle = marketingSection.querySelector(
-      ".section-subtitle"
-    );
+    const marketingSubtitle = marketingSection.querySelector(".section-subtitle");
     const marketingTitle = marketingSection.querySelector(".section-title");
 
     if (marketingSubtitle && translations[lang].marketingSubtitle) {
@@ -267,7 +301,7 @@ function updateContent(lang) {
     });
   }
 
-  // ====== قسم الشركاء (#partners) ======
+  // ====== Partners Section ======
   const partnersSection = document.getElementById("partners");
   if (partnersSection) {
     const partnersSubtitle = partnersSection.querySelector(".section-subtitle");
@@ -282,11 +316,10 @@ function updateContent(lang) {
     }
   }
 
-  // ====== الفوتر ======
+  // ====== Footer Section ======
   const footer = document.querySelector(".footer");
   if (footer) {
     const footerTitles = footer.querySelectorAll(".footer-list-title");
-    // 0: About, 1: Instagram post
     if (footerTitles[0]) {
       footerTitles[0].textContent = translations[lang].footerAboutTitle;
     }
@@ -305,15 +338,11 @@ function updateContent(lang) {
     }
   }
 
-  // ====== زر التواصل العائم (واتساب / إيميل / اتصال) ======
+  // ====== Floating Contact Menu ======
   const fcMenu = document.getElementById("fc-menu");
   if (fcMenu) {
     const labels = fcMenu.querySelectorAll(".fc-item span");
-    const contactKeys = [
-      "contactWhatsApp",
-      "contactEmail",
-      "contactPhone"
-    ];
+    const contactKeys = ["contactWhatsApp", "contactEmail", "contactPhone"];
     labels.forEach((el, idx) => {
       const key = contactKeys[idx];
       if (translations[lang][key]) {
@@ -322,12 +351,12 @@ function updateContent(lang) {
     });
   }
 
-  // حفظ اللغة في localStorage
+  // Save language preference
   localStorage.setItem("lang", lang);
   currentLang = lang;
 }
 
-// التبديل عند الضغط على زر اللغة
+// Language Toggle Event Listener
 if (langToggleBtn) {
   langToggleBtn.addEventListener("click", () => {
     const newLang = currentLang === "ar" ? "en" : "ar";
@@ -335,12 +364,12 @@ if (langToggleBtn) {
   });
 }
 
-// تطبيق اللغة عند تحميل الصفحة
+// Apply language on page load
 updateContent(currentLang);
 
-// =========================
-// Mobile nav toggle (لو عندك قائمة موبايل ثانية)
-// =========================
+// ============================================
+// MOBILE NAVIGATION TOGGLE
+// ============================================
 const navToggle = document.getElementById("navToggle");
 const mainNav = document.getElementById("mainNav");
 
@@ -350,31 +379,34 @@ if (navToggle && mainNav) {
   });
 }
 
-// =========================
-// Theme toggle (Light / Dark)
-// =========================
+// ============================================
+// THEME TOGGLE (Light / Dark Mode)
+// ============================================
 const themeToggle = document.getElementById("themeToggle");
 const root = document.documentElement;
 
+// Load saved theme
 const savedTheme = localStorage.getItem("dream-theme");
 if (savedTheme) root.setAttribute("data-theme", savedTheme);
 
+// Theme toggle event listener
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
-    const current =
-      root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    const current = root.getAttribute("data-theme") === "light" ? "dark" : "light";
     root.setAttribute("data-theme", current);
     localStorage.setItem("dream-theme", current);
   });
 }
 
-// سنة الفوتر تلقائياً (لو حاب تستخدمها في مكان آخر)
+// ============================================
+// AUTOMATIC COPYRIGHT YEAR
+// ============================================
 const yearSpan = document.getElementById("year");
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-// =========================
-// Marketing Swiper (السلايدر)
-// =========================
+// ============================================
+// SWIPER SLIDER (Marketing Projects)
+// ============================================
 const marketingSwiper = new Swiper(".marketing-slider", {
   slidesPerView: 1,
   spaceBetween: 25,
@@ -397,8 +429,11 @@ const marketingSwiper = new Swiper(".marketing-slider", {
   }
 });
 
-// === Reveal on scroll (sections animation) ===
+// ============================================
+// REVEAL ON SCROLL ANIMATION
+// ============================================
 const revealEls = document.querySelectorAll(".reveal");
+
 if (revealEls.length && "IntersectionObserver" in window) {
   const io = new IntersectionObserver(
     (entries) => {
@@ -414,10 +449,13 @@ if (revealEls.length && "IntersectionObserver" in window) {
 
   revealEls.forEach((el) => io.observe(el));
 } else {
+  // Fallback for browsers that don't support IntersectionObserver
   revealEls.forEach((el) => el.classList.add("is-visible"));
 }
 
-/* === Lightbox / Image viewer (professional popup) === */
+// ============================================
+// LIGHTBOX IMAGE VIEWER
+// ============================================
 (function () {
   const lightbox = document.getElementById("lightbox");
   if (!lightbox) return;
@@ -428,13 +466,11 @@ if (revealEls.length && "IntersectionObserver" in window) {
   const btnPrev = lightbox.querySelector(".lightbox__prev");
   const btnNext = lightbox.querySelector(".lightbox__next");
 
-  // Collect images that should open in the lightbox: images inside main article sections
-  const galleryImages = Array.from(
-    document.querySelectorAll("main article img")
-  );
+  // Collect all images from main article sections
+  const galleryImages = Array.from(document.querySelectorAll("main article img"));
   if (galleryImages.length === 0) return;
 
-  // Keep track of currently opened index
+  // Track currently opened image index
   let currentIndex = -1;
 
   function openAt(index) {
@@ -502,11 +538,12 @@ if (revealEls.length && "IntersectionObserver" in window) {
     }
   });
 
-  // Preload neighbors for smoother navigation
+  // Preload adjacent images for smoother navigation
   function preload(src) {
-    const i = new Image();
-    i.src = src;
+    const img = new Image();
+    img.src = src;
   }
+
   const obs = new MutationObserver(() => {
     if (currentIndex >= 0) {
       const next = (currentIndex + 1) % galleryImages.length;
@@ -518,19 +555,26 @@ if (revealEls.length && "IntersectionObserver" in window) {
   obs.observe(lightbox, { attributes: true, attributeFilter: ["class"] });
 })();
 
-// Floating Contact Menu
+// ============================================
+// FLOATING CONTACT MENU
+// ============================================
 const fcToggle = document.getElementById("fc-toggle");
 const fcMenu = document.getElementById("fc-menu");
 
 if (fcToggle && fcMenu) {
+  // Toggle menu on button click
   fcToggle.addEventListener("click", () => {
     fcMenu.classList.toggle("show");
   });
 
-  // إغلاق القائمة عند الضغط خارجها
+  // Close menu when clicking outside
   document.addEventListener("click", (e) => {
     if (!fcToggle.contains(e.target) && !fcMenu.contains(e.target)) {
       fcMenu.classList.remove("show");
     }
   });
 }
+
+// ============================================
+// END OF SCRIPT
+// ============================================
