@@ -39,7 +39,7 @@ const translations = {
     serviceCard5: "Design and Creatives",
     serviceCard6: "Marketing and Communication",
     serviceCard7: "Business Development",
-    serviceMoreLink: "04 More Services",
+    serviceMoreLink: " More Services",
 
     // ====== Features Section ======
     featureSubtitle: "Why Choose Dream Media",
@@ -108,7 +108,7 @@ const translations = {
     serviceCard5: "التصميم والإبداع",
     serviceCard6: "التسويق والاتصال",
     serviceCard7: "تطوير الأعمال",
-    serviceMoreLink: "04 خدمات أخرى",
+    serviceMoreLink: " خدمات أخرى",
 
     // ====== قسم المميزات ======
     featureSubtitle: "لماذا تختار دريم ميديا؟",
