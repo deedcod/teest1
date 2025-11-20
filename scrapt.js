@@ -32,12 +32,12 @@ const translations = {
     servicesSubtitle: "Our Services",
     servicesTitle:
       'Managing your business with our <span class="has-before">best service</span>',
-    serviceCard1: "business & consulting",
+    serviceCard1: "Marketing & Communication",
     serviceCard2: "Business Training",
     serviceCard3: "Printing",
     serviceCard4: "Event Management",
     serviceCard5: "Design & Creatives",
-    serviceCard6: "Marketing & Communication",
+    serviceCard6: "business & consulting",
     serviceCard7: "Business Development",
     serviceMoreLink: " More Services",
 
@@ -101,14 +101,14 @@ const translations = {
     servicesSubtitle: "خدماتنا",
     servicesTitle:
       'ندير أعمالك من خلال <span class="has-before">أفضل الخدمات</span>',
-    serviceCard1: "الأعمال والاستشارات",
+    serviceCard1: "التسويق والاتصال",
     serviceCard2: "تدريب الأعمال",
     serviceCard3: "الطباعة",
     serviceCard4: "إدارة الفعاليات",
     serviceCard5: "التصميم والإبداع",
-    serviceCard6: "التسويق والاتصال",
+    serviceCard6: "الأعمال والاستشارات",
     serviceCard7: "تطوير الأعمال",
-    serviceMoreLink: " خدمات أخرى",
+    serviceMoreLink: "خدمات أخرى",
 
     // ====== قسم المميزات ======
     featureSubtitle: "لماذا تختار دريم ميديا؟",
@@ -181,13 +181,11 @@ function updateContent(lang) {
   const navService = document.querySelector('[data-nav-link][href="#service"]');
   const navFeature = document.querySelector('[data-nav-link][href="#feature"]');
   const navProject = document.querySelector('[data-nav-link][href="#project"]');
-  const navBlog = document.querySelector('[data-nav-link][href="#blog"]');
 
   if (navHome) navHome.textContent = translations[lang].home;
   if (navService) navService.textContent = translations[lang].services;
   if (navFeature) navFeature.textContent = translations[lang].features;
   if (navProject) navProject.textContent = translations[lang].marketing;
-  if (navBlog) navBlog.textContent = translations[lang].blog;
 
   // ====== Book Now Button ======
   const bookBtn = document.querySelector(".btn-primary.has-before.has-after");
