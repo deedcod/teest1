@@ -32,12 +32,12 @@ const translations = {
     servicesSubtitle: "Our Services",
     servicesTitle:
       'Managing your business with our <span class="has-before">best service</span>',
-    serviceCard1: "Marketing & Communication",
+    serviceCard1: "business & consulting",
     serviceCard2: "Business Training",
     serviceCard3: "Printing",
     serviceCard4: "Event Management",
-    serviceCard5: "Design and Creatives",
-    serviceCard6: "Marketing and Communication",
+    serviceCard5: "Design & Creatives",
+    serviceCard6: "Marketing & Communication",
     serviceCard7: "Business Development",
     serviceMoreLink: " More Services",
 
@@ -101,7 +101,7 @@ const translations = {
     servicesSubtitle: "خدماتنا",
     servicesTitle:
       'ندير أعمالك من خلال <span class="has-before">أفضل الخدمات</span>',
-    serviceCard1: "التسويق والاتصال",
+    serviceCard1: "الأعمال والاستشارات",
     serviceCard2: "تدريب الأعمال",
     serviceCard3: "الطباعة",
     serviceCard4: "إدارة الفعاليات",
